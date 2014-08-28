@@ -1,0 +1,28 @@
+<launch>
+  <node
+    name="turtlesim_node"
+    pkg="turtlesim"
+    type="turtlesim_node"
+    ns="sim1"
+  />
+  <node
+    pkg="turtlesim"
+    type="turtle_teleop_key"
+    name="teleop_key"
+    required="true"
+    launch-prefix="xterm -e"
+    ns="sim1"
+  />
+  <node
+    name="turtlesim_node"
+    pkg="turtlesim"
+    type="turtlesim_node"
+    ns="sim2"
+  />
+  <node
+    pkg="agitr"
+    type="pubvel.py"
+    name="velocity_publisher"
+    ns="sim2"
+  />
+</launch>

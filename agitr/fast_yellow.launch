@@ -1,0 +1,19 @@
+<launch>
+  <node
+    pkg="turtlesim"
+    type="turtlesim_node"
+    name="turtlesim"
+  />
+  <node
+    pkg="agitr"
+    type="pubvel_with_max.py"
+    name="publish_velocity"
+  >
+    <param name="max_vel" value="3" />
+  </node>
+  <node
+    pkg="agitr"
+    type="set_bg_color.py"
+    name="set_bg_color"
+  />
+</launch>

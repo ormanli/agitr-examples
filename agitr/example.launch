@@ -1,0 +1,21 @@
+<launch>
+  <node
+    pkg="turtlesim"
+    type="turtlesim_node"
+    name="turtlesim"
+    respawn="true"
+  />
+  <node
+    pkg="turtlesim"
+    type="turtle_teleop_key"
+    name="teleop_key"
+    required="true"
+    launch-prefix="xterm -e"
+  />
+  <node
+    pkg="agitr"
+    type="subpose.py"
+    name="pose_subscriber"
+    output="screen"
+  />
+</launch>

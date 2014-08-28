@@ -1,0 +1,19 @@
+<launch>
+  <node
+    pkg="turtlesim"
+    type="turtlesim_node"
+    name="turtlesim"
+    respawn="true"
+  />
+  <node
+    pkg="agitr"
+    type="pubvel.py"
+    name="velocity_publisher"
+  />
+  <node
+    pkg="agitr"
+    type="subpose.py"
+    name="pose_subscriber"
+    output="screen"
+  />
+</launch>
